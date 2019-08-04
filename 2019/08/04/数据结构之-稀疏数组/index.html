@@ -6,19 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>我的第一篇博客 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##第一章内容 ##第二章内容 ##参考文献www.vigorquant.cn">
+  <meta name="description" content="#数据结构之 稀疏数组 #使用稀疏数组压缩二维数组  试想象这样一个情景：需要实现一个五子棋棋盘。如下图所示：为了实现此数组，需要通过n*m的矩阵实现。因此，令黑子落点值为1，白字落点值为2。未落子点值为0。   ##一、使用目的#  当一个数组中大部分元素为0，或者为同一个值的数组时，可以使用稀疏数组来保存数组。     通过稀疏数组方式，很容易发现在存储原棋盘1212的矩阵，转化为了33的矩阵">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http://yoursite.com/2019/08/02/我的第一篇博客/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2019/08/04/数据结构之-稀疏数组/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="##第一章内容 ##第二章内容 ##参考文献www.vigorquant.cn">
+<meta property="og:description" content="#数据结构之 稀疏数组 #使用稀疏数组压缩二维数组  试想象这样一个情景：需要实现一个五子棋棋盘。如下图所示：为了实现此数组，需要通过n*m的矩阵实现。因此，令黑子落点值为1，白字落点值为2。未落子点值为0。   ##一、使用目的#  当一个数组中大部分元素为0，或者为同一个值的数组时，可以使用稀疏数组来保存数组。     通过稀疏数组方式，很容易发现在存储原棋盘1212的矩阵，转化为了33的矩阵">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-02T08:12:02.071Z">
+<meta property="og:image" content="https://i.imgur.com/ccUlvj2.png">
+<meta property="og:image" content="https://i.imgur.com/P1oSYgz.png">
+<meta property="og:image" content="https://i.imgur.com/RY7XWSc.png">
+<meta property="og:updated_time" content="2019-08-04T08:10:42.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇博客">
-<meta name="twitter:description" content="##第一章内容 ##第二章内容 ##参考文献www.vigorquant.cn">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="#数据结构之 稀疏数组 #使用稀疏数组压缩二维数组  试想象这样一个情景：需要实现一个五子棋棋盘。如下图所示：为了实现此数组，需要通过n*m的矩阵实现。因此，令黑子落点值为1，白字落点值为2。未落子点值为0。   ##一、使用目的#  当一个数组中大部分元素为0，或者为同一个值的数组时，可以使用稀疏数组来保存数组。     通过稀疏数组方式，很容易发现在存储原棋盘1212的矩阵，转化为了33的矩阵">
+<meta name="twitter:image" content="https://i.imgur.com/ccUlvj2.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,29 +158,111 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-数据结构之-稀疏数组" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      我的第一篇博客
-    </h1>
-  
-
-        
-        <a href="/2019/08/02/我的第一篇博客/" class="archive-article-date">
-  	<time datetime="2019-08-02T08:00:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##第一章<br>内容</p>
-<p>##第二章<br>内容</p>
-<p>##参考文献<br><a href="http://www.vigorquant.cn" target="_blank" rel="noopener">www.vigorquant.cn</a></p>
+        <p>#数据结构之 稀疏数组 #<br>使用稀疏数组压缩二维数组</p>
+<blockquote>
+<p>试想象这样一个情景：需要实现一个五子棋棋盘。如下图所示：<br>为了实现此数组，需要通过n*m的矩阵实现。因此，令黑子落点值为1，白字落点值为2。未落子点值为0。</p>
+</blockquote>
+<p><img src="https://i.imgur.com/ccUlvj2.png" alt></p>
+<p>##一、使用目的#</p>
+<ul>
+<li>当一个数组中大部分元素为0，或者为同一个值的数组时，可以使用稀疏数组来保存数组。</li>
+</ul>
+<p><img src="https://i.imgur.com/P1oSYgz.png" alt></p>
+<p><img src="https://i.imgur.com/RY7XWSc.png" alt></p>
+<blockquote>
+<p>通过稀疏数组方式，很容易发现在存储原棋盘12<em>12的矩阵，转化为了3</em>3的矩阵。有效缩短了存储空间和读写复杂度。</p>
+</blockquote>
+<p>##二、处理方法</p>
+<ul>
+<li>1）记录数组一共有几行几列，有多少不同的值</li>
+<li>2）把具有不同值的元素的行列及值记录在一个小规模的数组中，从而缩小程序的规模</li>
+</ul>
+<p>##三、应用实例</p>
+<p>（1）二维数组转稀疏数组的思路：</p>
+<ul>
+<li>1.遍历原始的二维数组，得到有效数据的个数 sum</li>
+<li>2.根据sum 就可以创建稀疏数组parseArray int[sum+1][3]</li>
+<li>3.将二维数组的有效数据存入稀疏数组</li>
+</ul>
+<p>（2） 稀疏数组转二维数组：</p>
+<ul>
+<li>1.读取稀疏数组第一行，根据第一行数据，创建原始数组。</li>
+<li>2.读取稀疏数组后几行的数据，并赋值给原始二维数组</li>
+</ul>
+<p>  代码实现：</p>
+<p>   `public class SparaseArray {</p>
+<pre><code>public static void main(String[] args) {
+    //先创建一个11*11 的二维数组
+    //以五子棋盘为例
+    System.out.println(&quot;---------原始二维数组&quot;);
+    int[][] chessarray1 = new int[11][11];
+    chessarray1[1][2] = 1;
+    chessarray1[2][3] = 2;
+    chessarray1[4][5] = 3;
+    for (int[] raw : chessarray1) {
+        for (int data : raw) {
+            System.out.print(data + &quot; &quot;);
+        }
+        System.out.println();
+    }
+    //统计原数组中不为0的数
+    System.out.println(&quot;--其中--&quot;);
+    int sumNoZero = 0;
+    for (int i = 0; i &lt; chessarray1.length; i++) {
+        for (int j = 0; j &lt; chessarray1[i].length; j++) {
+            if (chessarray1[i][j] != 0) {
+                sumNoZero++;
+                System.out.println(&quot;第&quot; + i + &quot;行&quot; + &quot;第&quot; + j + &quot;列的值为&quot; + chessarray1[i][j]);
+            }
+        }
+    }
+    System.out.println(&quot;共&quot;+sumNoZero+&quot;个不为0的数&quot;);
+    //创建稀疏数组
+    int[][] sparaseArray = new int[sumNoZero+1][3];
+    //赋值
+    sparaseArray[0][0] =chessarray1.length;
+    sparaseArray[0][1] =chessarray1[1].length;
+    sparaseArray[0][2] =sumNoZero;
+    //遍历二维数组 将非0 的值存放到 细数着数组中
+    int count = 0;//稀疏数组行数
+    for (int i=0;i&lt;chessarray1.length;i++){//第几行
+        for (int j=0;j&lt;chessarray1[i].length;j++){//第几列
+            if (chessarray1[i][j]!=0){
+                count++;
+                sparaseArray[count][0] = i;
+                sparaseArray[count][1] = j;
+                sparaseArray[count][2] = chessarray1[i][j];
+            }
+        }
+    }
+    //输出稀疏数组
+    System.out.println(&quot;--------输出稀疏数组&quot;);
+    for (int i=0;i&lt;sparaseArray.length;i++){
+        System.out.printf(&quot;%d\t%d\t%d\t&quot;,sparaseArray[i][0],sparaseArray[i][1],sparaseArray[i][2]);
+        System.out.println();
+    }
+    //将稀疏数组恢复成 原始的二维数组
+    int[][] chessArray2 = new int[sparaseArray[0][0]][sparaseArray[0][1]];
+    for (int i=1;i&lt;sparaseArray.length;i++){
+        chessArray2[sparaseArray[i][0]][sparaseArray[i][1]] = sparaseArray[i][2];
+    }
+    System.out.println(&quot;-------打印恢复后的二维数组&quot;);
+    for (int[] raw : chessArray2) {
+        for (int data : raw) {
+            System.out.print(data + &quot; &quot;);
+        }
+        System.out.println();
+    }
+}
+/**
+ * 练习：将稀疏数组保存到磁盘上文件 map.java
+ * 恢复时  读取该文件读取。
+ */</code></pre><p>}`</p>
 
       
 
@@ -256,7 +342,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/02/我的第一篇博客/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/04/数据结构之-稀疏数组/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -270,18 +356,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/04/数据结构之-稀疏数组/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/02/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2019/08/02/我的第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客</div>
       <i class="icon-circle-right"></i>
     </a>
   
